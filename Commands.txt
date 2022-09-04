@@ -1,0 +1,16 @@
+Cluster Health
+------------------
+minikube status
+kubectl version
+
+
+git clone https://github.com/NubeEra-Samples/K8S_StatelessRedisGuestBook.git
+cd K8S_StatelessRedisGuestBook
+
+kubectl apply -k ./
+
+kubectl get services
+
+kubectl port-forward svc/frontend 30589:80
+
+http://localhost:30589/
